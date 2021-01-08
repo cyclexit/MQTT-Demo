@@ -17,7 +17,7 @@ class PubClient : public Client {
  
  public:
   PubClient(std::string _id, std::string _topic);
-  ~PubClient();
+  ~PubClient() {};
 
   int connect(std::string host, int port, int duration) override;
   int disconnect() override;
