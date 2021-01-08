@@ -18,6 +18,8 @@ class Client {
   Client(std::string _id);
   ~Client();
 
+  std::string get_id() const { return id; }
+
   virtual int connect(std::string host, int port, int duration);
   virtual int disconnect();
 };
