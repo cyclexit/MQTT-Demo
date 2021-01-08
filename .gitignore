@@ -1,0 +1,5 @@
+# bin folder
+bin/
+
+# executable files
+mqtt_pub
