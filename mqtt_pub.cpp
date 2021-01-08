@@ -34,6 +34,8 @@ int main() {
     return -1;
   }
 
+  pub_client.disconnect();
+
   ::mosquitto_lib_cleanup();
   return 0;
 }
