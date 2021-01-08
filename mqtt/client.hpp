@@ -10,15 +10,16 @@ extern "C" {
 namespace mqtt {
 
 class Client {
- private:
+ protected:
+  std::string id;
   mosquitto* mosq;
  
  public:
-  Client(std::string id);
+  Client(std::string _id);
   ~Client();
 
-  int connect(std::string host, int port, int duration);
-  int disconnect();
+  virtual int connect(std::string host, int port, int duration);
+  virtual int disconnect();
 };
 
 } // namespace mqtt
