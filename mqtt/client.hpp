@@ -20,8 +20,8 @@ class Client {
 
   std::string get_id() const { return id; }
 
-  virtual int connect(std::string host, int port, int duration);
-  virtual int disconnect();
+  virtual int connect(std::string host, int port, int duration) = 0;
+  virtual int disconnect() = 0;
 };
 
 } // namespace mqtt

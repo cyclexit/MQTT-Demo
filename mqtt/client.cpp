@@ -18,12 +18,4 @@ Client::~Client() {
   mosquitto_destroy(mosq);
 }
 
-int Client::connect(std::string host, int port, int duration) {
-  return mosquitto_connect(mosq, host.c_str(), port, duration);
-}
-
-int Client::disconnect() {
-  return mosquitto_disconnect(mosq);
-}
-
 } // namespace mqtt
