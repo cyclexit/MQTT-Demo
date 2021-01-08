@@ -6,8 +6,16 @@ This is a demo to pratice with MQTT model with mosquitto library. However, mosqu
 ## Environment and Dependencies
 Environment: Ubuntu 20.04
 ```bash
-sudo apt-get install gcc mosquitto mosquitto-clients libmosquitto-dev
+sudo apt-get install gcc g++ mosquitto mosquitto-clients libmosquitto-dev
 ```
+
+## Build
+```bash
+make
+```
+
+## Results
+![mqtt_pub.png](./picture/mqtt_pub.png)
 
 ## Reference
 [Write a MQTT Publisher Client in C with the Mosquitto library](https://www.youtube.com/watch?v=ERPhUsmbhMo&t=45s)
