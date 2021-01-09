@@ -15,8 +15,6 @@ class SubClient : Client {
  private:
   std::string topic;
 
-  void on_message(mosquitto* m, void* obj, const mosquitto_message* msg);
-
  public:
   SubClient(std::string _id, std::string _topic);
   ~SubClient() {};
