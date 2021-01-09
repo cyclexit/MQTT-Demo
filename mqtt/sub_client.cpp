@@ -12,7 +12,7 @@ namespace mqtt {
 namespace {
 
 void on_message(mosquitto* mosq, void* obj, const mosquitto_message* msg) {
-  std::cout << msg->topic << ": " << msg->payload << std::endl;
+  std::cout << std::string(msg->topic) << ": " << std::string((char*) msg->payload) << std::endl;
 }
 
 } // anonymous namespace
@@ -22,7 +22,9 @@ SubClient::SubClient(std::string _id, std::string _topic) : Client(_id), topic(_
 }
 
 int SubClient::connect(std::string host, int port, int duration) {
-  return mosquitto_connect(mosq, host.c_str(), port, duration);
+  int rc = mosquitto_connect(mosq, host.c_str(), port, duration);
+  if (rc == 0) mosquitto_subscribe(mosq, NULL, topic.c_str(), 0);
+  return rc;
 }
 
 int SubClient::disconnect() {

@@ -3,3 +3,4 @@ bin/
 
 # executable files
 mqtt_pub
+mqtt_sub
