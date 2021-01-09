@@ -16,6 +16,7 @@ make all
 
 ## Results
 ![mqtt_pub.png](./picture/mqtt_pub.png)
+![mqtt_sub.png](./picture/mqtt_sub.png)
 
 ## Reference
 [Write a MQTT Publisher Client in C with the Mosquitto library](https://www.youtube.com/watch?v=ERPhUsmbhMo&t=45s) </br>
