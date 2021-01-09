@@ -1,5 +1,5 @@
 #include <iostream>
-#include <functional>
+#include <string>
 
 extern "C" {
 #include <mosquitto.h>
